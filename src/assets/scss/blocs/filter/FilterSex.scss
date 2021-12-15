@@ -1,0 +1,38 @@
+// :::  Basic settings
+@import '@scss-utils/vars';
+@import '@scss-utils/mixins';
+
+.filter-sex {
+	display: flex;
+	width: 100%;
+	
+	&__item {
+		width: 33.3333%;
+
+		> input {
+			display: none;
+		}
+
+		> label {
+			display: block;
+			width: 100%;
+			border: 1px solid $bg-main-color;
+			color: $text-fourth-color;
+			text-align: center;
+			padding: 1.4rem 0 1.3rem;
+			cursor: pointer;
+			
+			@include text-truncation();
+
+			&:hover {
+				background-color: $bg-main-color;
+				color: $text-main-color;
+			}
+		}
+
+		> input:checked ~ label {
+			background-color: $bg-main-color;
+			color: $text-main-color;
+		}
+	}
+}

@@ -1,0 +1,26 @@
+// :::  Basic settings
+@import '@scss-utils/vars';
+@import '@scss-utils/mixins';
+
+.vacancies {
+	@include breakpoint-range($bp-mobile, $bp-tablet) {
+		.container {
+			padding: 6rem 0;
+			gap: 2rem;
+		}
+
+		&__card {
+			padding: 9rem 4rem;
+		}
+	}
+
+	@include breakpoint($bp-mobile) {
+		.container {
+			padding: 4rem 0 2rem;
+		}
+
+		&__card {
+			padding: 6rem 3rem;
+		}
+	}
+}

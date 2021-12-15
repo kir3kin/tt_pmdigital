@@ -1,0 +1,59 @@
+// :::  Basic settings
+@import '@scss-utils/vars';
+@import '@scss-utils/mixins';
+
+.search-form {
+	display: flex;
+	flex-flow: row;
+	justify-content: center;
+
+	&__field {
+		position: relative;
+		margin-right: 1rem;
+	}
+
+	&__label {
+		position: absolute;
+		width: 2rem;
+		height: 2.4rem;
+		top: 50%;
+		left: 1.25rem;
+		transform: translateY(-50%);
+		background-repeat: no-repeat;
+
+		&--position {
+			background-image: url('@images/icons/header/find.svg');
+			background-position: 50% 80%;
+		}
+		
+		&--city {
+			background-image: url('@images/icons/header/city.svg');
+			background-position: 50% 30%;
+		}
+	}
+
+	&__input {
+		padding: 1.3rem 1.3rem 1.3rem 4.5rem;
+		height: 4.8rem;
+		background-color: rgba(255, 255, 255, 0.15);
+		border: none;
+		outline: none;
+		color: $text-main-color;
+		letter-spacing: .5px;
+
+		&::placeholder {
+			color: $text-placeholder-color;
+		}
+
+		&--position {
+			width: 40rem;
+		}
+
+		&--city {
+			width: 20rem;
+		}
+	}
+
+	// &__button {}
+
+}

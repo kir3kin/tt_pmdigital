@@ -1,0 +1,179 @@
+// :::  Basic settings
+@import '@scss-utils/vars';
+@import '@scss-utils/mixins';
+
+.candidate-card {
+	border: 1px solid $brdr-color;
+	padding: 2rem;
+	display: flex;
+	flex-flow: row;
+	align-items: center;
+	justify-content: space-between;
+
+	// ::: [START:] Content ::: \\
+	&__content {
+		width: 90%;
+		padding-right: 2rem;
+	}
+
+	&__image {
+		border-radius: 50%;
+		width: 16.4rem;
+		height: 16.4rem;
+		overflow: hidden;
+		display: block;
+		float: left;
+		margin-right: 2rem;
+		
+		img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	&__title {
+		color: $text-fourth-color;
+		font-size: $text-second-size;
+		font-weight: 500;
+
+		@include text-truncation();
+	}
+
+	&__info {
+		display: flex;
+		flex-flow: row;
+		margin-top: 2rem;
+		align-items: center;
+
+		& > p {
+			color: $text-fourth-color;
+		}
+
+		&__name {
+			font-size: $text-fourth-size;
+		}
+	
+		&__location {
+			margin-left: 2rem;
+			padding-left: 3rem;
+			display: flex;
+			flex-flow: row;
+			align-items: center;
+	
+			&::before {
+				content: '';
+				display: block;
+				width: 2.4rem;
+				height: 2.4rem;
+				background-repeat: no-repeat;
+				background-position: center;
+	
+				background-image: url('@images/icons/location.svg');
+			}
+		}
+	}
+
+	&__exp {
+		margin-top: 1.6rem;
+
+		&__item {
+			color: $text-third-color;
+			line-height: 1.7rem;
+
+			&:not(:last-child) {
+				margin-bottom: 1.2rem;
+			}
+		}
+	}
+
+	&__last {
+		margin-top: 2rem;
+		display: flex;
+		flex-flow: row;
+		font-size: $text-sixth-size;
+
+		&__update {
+			color: #ADADAD
+		}
+
+		&__state {
+			margin-left: 2rem;
+			color: $switch-non-active;
+			display: flex;
+			flex-flow: row;
+			align-items: center;
+
+			&::before {
+				content: '';
+				display: inline-block;
+				background-color: $switch-non-active;
+				width: 1.2rem;
+				height: 1.2rem;
+				border-radius: 50%;
+				margin-right: .5rem;
+			}
+
+			&--online {
+				color: $switch-active;
+
+				&::before {
+					background-color: $switch-active;
+				}
+			}
+		}
+	}
+	// ::: [END:] Content ::: \\
+
+	&__option {
+		display: flex;
+		flex-flow: row;
+		justify-content: flex-end;
+		width: 10%;
+		gap: 1.2rem;
+		
+		&__like {
+			z-index: $option-like;
+			-webkit-tap-highlight-color: transparent;
+
+			input {
+				display: none;
+			}
+			
+			label {
+				display: block;
+				width: 100%;
+				height: 100%;
+				background-repeat: no-repeat;
+				background-position: center;
+				background-image: url('@images/icons/heart.svg');
+				cursor: pointer;
+
+				&:hover {
+					background-image: url('@images/icons/heart-filled.svg');
+				}
+
+			}
+		}
+
+		&__more {
+			background-repeat: no-repeat;
+			background-position: center;
+			background-image: url('@images/icons/more.svg');
+			position: relative;
+			cursor: pointer;
+			-webkit-tap-highlight-color: transparent;
+
+			&:hover {
+				.more-list {
+					display: flex;
+				}
+			}
+		}
+		
+		&__like,
+		&__more {
+			height: 2.4rem;
+			width: 2.4rem;
+		}
+	}
+}

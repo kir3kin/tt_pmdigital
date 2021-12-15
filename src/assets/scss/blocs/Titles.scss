@@ -1,0 +1,18 @@
+.titles {
+	font-size: $text-first-size;
+	font-weight: 700;
+	color: $text-second-color;
+	position: relative;
+	display: inline-block;
+	text-transform: uppercase;
+	padding-top: 1.5rem;
+
+	&::before {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 0;
+		width: 17rem;
+		border-top: 1px solid $text-second-color;
+	}
+}

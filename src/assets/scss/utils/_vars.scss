@@ -1,0 +1,78 @@
+// ================ Media breakpoints ================
+$bp-tablet: 1300px;
+$bp-mobile: 768px;
+
+
+// ================ Container sizes ================
+$container-lg: 1240px;
+$container-tablet: 760px;
+$container-mobile: 375px;
+
+
+// ================ Font family ================
+$font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+
+
+// ================ Main ================ \\
+// ::: Common colors ::: \\
+$bg-main-color: #000046;
+$bg-second-color: #FAF5FF;
+$bg-third-color: #851FFF;
+$bg-fourth-color: #fff;
+
+$text-main-color: #fff;
+$text-second-color: #2A172D;
+$text-third-color: #555556;
+$text-fourth-color: #000046;
+$text-fifth-color: #851FFF;
+
+$text-placeholder-color: #ddd;
+
+// ::: Common font sizes ::: \\
+$text-first-size: 32px;
+$text-second-size: 24px;
+$text-third-size: 18px;
+$text-fourth-size: 16px;
+$text-fifth-size: 14px;
+$text-sixth-size: 12px;
+
+
+// ::: Navigation ::: \\
+$navigation-nav-bg: #251427;
+$navigation-text-nonactive-color: #EAEAEA;
+
+// ::: Header ::: \\
+$header-button-bg: #FFF9E4;
+$header-subtitle-size: 64px;
+
+
+// ::: Actual vacancy ::: \\
+$vacancy-1-bg: #C893EA;
+$vacancy-2-bg: #E2CBFF;
+$vacancy-3-bg: #F0E4FF;
+
+$vacancy-numbers-size: 48px;
+
+// ::: User Card ::: \\
+$brdr-color: #EAEAEA;
+
+// ::: Pagination ::: \\
+$pg-text-color: #ADADAD;
+$pg-arr-color--active: #000046;
+
+
+// ::: Filter ::: \\
+$checkbox-border-color: #FFE177;
+$checkbox-filled-color-first: #FFE177;
+$checkbox-filled-color-second: #000046;
+
+$switch-non-active: #5B5B5B;
+$switch-active: #4CAF50;
+
+// ================ Additional ================ \\
+
+// ::: z-indexes ::: \\
+$option-like: 1;
+$option-more-list: 2;
+$filter-tablet: 4;
+$filter-icon: 10;

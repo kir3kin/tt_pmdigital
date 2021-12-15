@@ -1,0 +1,36 @@
+// :::  Basic settings
+@import '@scss-utils/vars';
+@import '@scss-utils/mixins';
+
+.store {
+	&__item {
+		display: block;
+		width: 18.5rem;
+		height: 5.7rem;
+		padding: 0;
+		margin: 0;
+		background-repeat: no-repeat;
+		background-position: center;
+
+		&:not(:last-child) {
+			margin-bottom: 1.4rem;
+		}
+
+		&--iphone {
+			background-image: url('@images/stores/appstore.svg');
+
+			&-gray {
+				background-image: url('@images/stores/appstore--gray.svg');
+			}
+		}
+
+		&--google {
+			background-image: url('@images/stores/google-play.svg');
+
+			&-gray {
+				background-image: url('@images/stores/google-play--gray.svg');
+			}
+		}
+
+	}
+}

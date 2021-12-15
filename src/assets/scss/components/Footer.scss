@@ -1,0 +1,122 @@
+// :::  Basic settings
+@import '@scss-utils/vars';
+@import '@scss-utils/mixins';
+
+.footer {
+	.wrapper {
+		background-color: $bg-main-color;
+		color: $text-main-color;
+	}
+
+	.container {
+		padding: 5rem 0;
+		display: flex;
+		flex-flow: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__top {
+		display: flex;
+		flex-flow: row;
+		justify-content: space-between;
+		gap: 5rem;
+	}
+
+	&__list {
+		&__title {
+			font-size: $text-fourth-size;
+			font-weight: 600;
+			letter-spacing: 1px;
+			margin-bottom: 2rem;
+			text-transform: capitalize;
+
+			@include text-truncation();
+		}
+		
+
+		&__item {
+			a {
+				color: $text-placeholder-color;
+				text-decoration: none;
+				@include text-truncation();
+
+				&:hover {
+					color: $text-main-color;
+				}
+			}
+
+			&:not(:last-child) {
+				margin-bottom: 1.5rem;
+			}
+		}
+	}
+
+	&__social {
+		margin-top: 5rem;
+		padding: 1.6rem;
+		display: flex;
+		flex-flow: row;
+		justify-content: space-between;
+		gap: 1.6rem;
+
+		&__item {
+			width: 2.4rem;
+			height: 2.4rem;
+			display: block;
+			background-repeat: no-repeat;
+			background-position: center;
+
+			&--twitter {
+				background-image: url('@images/icons/twitter.svg');
+			}
+			&--linkedin {
+				background-image: url('@images/icons/linkedin.svg');
+			}
+			&--facebook {
+				background-image: url('@images/icons/facebook.svg');
+			}
+			&--instagram {
+				background-image: url('@images/icons/instagram.svg');
+			}
+			&--youtube {
+				background-image: url('@images/icons/youtube.svg');
+			}
+			&--whatsapp {
+				background-image: url('@images/icons/whatsapp.svg');
+			}
+		}
+	}
+
+	&__store {
+		display: none;
+	}
+
+	&__bottom {
+		margin-top: 2rem;
+		border-top: 1px solid #EAEAEA;
+		width: 100%;
+		padding-top: 2.5rem;
+	}
+
+	&__info {
+		display: flex;
+		flex-flow: row;
+		justify-content: center;
+
+		&__item {
+			display: block;
+			text-decoration: none;
+			color: $text-main-color;
+
+			&:not(:last-child) {
+				padding-right: 3rem;
+				border-right: 1px solid $text-main-color;
+			}
+
+			&:not(:first-child) {
+				padding-left: 3rem;
+			}
+		}
+	}
+}

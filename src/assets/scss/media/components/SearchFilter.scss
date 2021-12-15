@@ -1,0 +1,27 @@
+// :::  Basic settings
+@import '@scss-utils/vars';
+@import '@scss-utils/mixins';
+
+.filter {
+	@include breakpoint($bp-tablet) {
+		display: none;
+		position: absolute;
+		z-index: $filter-tablet;
+		background-color: #fff;
+		margin-bottom: 2rem;
+		padding: 0 20rem;
+
+		&__title {
+			text-align: center;
+			margin-top: 1rem;
+		}
+
+		&--open {
+			display: flex !important;
+		}
+	}
+
+	@include breakpoint($bp-mobile) {
+		padding: 0;
+	}
+}

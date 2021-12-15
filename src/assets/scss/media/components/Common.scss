@@ -1,0 +1,11 @@
+.container {
+	@include breakpoint-range($bp-mobile, $bp-tablet) {
+		width: $container-tablet;
+	}
+
+	@include breakpoint($bp-mobile) {
+		width: $container-mobile;
+		padding-left: 2rem;
+		padding-right: 2rem;
+	}
+}

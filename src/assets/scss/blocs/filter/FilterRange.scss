@@ -1,0 +1,92 @@
+// :::  Basic settings
+@import '@scss-utils/vars';
+@import '@scss-utils/mixins';
+
+.filter-range {
+	* {
+		font-size: $text-fourth-size;
+		font-weight: 300;
+	}
+
+	.rc-slider {
+		&-rail {
+			height: 1px;
+		}
+
+		&-track {
+			height: 1px;
+			background-color: $bg-third-color;
+		}
+
+		&-handle {
+			width: 1.5rem;
+			height: 1.5rem;
+			background-color: $bg-third-color;
+			border-color: $bg-third-color;
+			margin-top: -0.7rem;
+			outline: none;
+
+			&-dragging, &:focus, &:active, &:hover {
+				border-color: $bg-third-color !important;
+			}
+
+			&:active {
+				box-shadow: none;
+			}
+
+			&-dragging, &:hover {
+				box-shadow: 0 0 1px 4px rgba($bg-third-color, 30%) !important;
+			}
+		}
+	}
+
+	&__rail {
+		display: flex;
+		flex-flow: row;
+		align-items: center;
+		justify-content: space-between;
+		line-height: 2rem;
+		height: 2rem;
+		
+		&__item {
+			&.rc-slider {
+				top: 3px;
+			}
+
+			&:not(:last-child) {
+				margin-right: 1.2rem;
+			}
+		}
+	}
+
+	&__value {
+		margin-top: 2.4rem;
+		display: flex;
+		flex-flow: row;
+		justify-content: space-between;
+		align-items: center;
+
+		&__item {
+			display: flex;
+			flex-flow: row;
+			align-items: center;
+
+			input {
+				border: 1px solid $switch-non-active;
+				width: 8.5rem;
+				height: 3.6rem;
+				outline: none;
+				padding: 0 .5rem;
+				text-align: center;
+			}
+
+			label {
+				margin-right: 1rem;
+			}
+		}
+
+		&__ms {
+			margin-left: 1rem;
+		}
+	}
+}

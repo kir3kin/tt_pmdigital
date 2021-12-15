@@ -1,0 +1,23 @@
+// :::  Basic settings
+@import '@scss-utils/vars';
+@import '@scss-utils/mixins';
+
+.result {
+	@include breakpoint($bp-mobile) {
+		&__title {
+			width: 26rem;
+			line-height: 3rem;
+		}
+
+		&__sort {
+			align-items: flex-start;
+			justify-content: space-between;
+
+			&__desc {
+				font-size: $text-sixth-size;
+				line-height: 1.5rem;
+				width: 50%;
+			}
+		}
+	}
+}

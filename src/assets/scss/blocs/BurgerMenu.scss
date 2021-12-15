@@ -1,0 +1,16 @@
+// :::  Basic settings
+@import '@scss-utils/vars';
+@import '@scss-utils/mixins';
+
+.burger-menu {
+	&__icon {
+		display: block;
+		width: 2.5rem;
+		height: 2.4rem;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-image: url('@images/icons/header/menu.svg');
+
+		margin-bottom: 4rem;
+	}
+}

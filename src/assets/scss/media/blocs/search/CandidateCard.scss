@@ -1,0 +1,78 @@
+// :::  Basic settings
+@import '@scss-utils/vars';
+@import '@scss-utils/mixins';
+
+.candidate-card {
+	@include breakpoint-range($bp-mobile, $bp-tablet) {
+		width: 100%;
+
+		// ::: [START:] Content ::: \\
+		&__content {
+			width: 90%;
+		}
+		// ::: [END:] Content ::: \\
+	}
+	
+	@include breakpoint($bp-mobile) {
+		padding: 1.6rem 1.75rem;
+		flex-wrap: wrap;
+		position: relative;
+		
+		// ::: [START:] Content ::: \\
+		&__content {
+			width: 100%;
+			padding: 0;
+		}
+		
+		&__image {
+			width: 7rem;
+			height: 7rem;
+		}
+
+		&__title {
+			font-size: $text-fourth-size;
+			font-weight: 500;
+		}
+
+		&__info {
+			margin-top: .6rem;
+			flex-flow: column;
+			align-items: flex-start;
+
+			&__location {
+				margin-top: 0.3rem;
+				margin-left: 0;
+				padding-left: 0;
+				transform: translateX(-.5rem);
+
+				&::before {
+					margin-right: .6rem;
+				}
+			}
+		}
+
+		&__exp {
+			margin-top: 2rem;
+		}
+
+		&__last {
+			flex-flow: column-reverse;
+
+			&__update {
+				margin-top: 2rem;
+			}
+
+			&__state {
+				margin-left: 0;
+			}
+		}
+		// ::: [START:] Content ::: \\
+
+		&__option {
+			width: auto;
+			position: absolute;
+			bottom: 1.6rem;
+			right: 1.75rem;
+		}
+	}
+}

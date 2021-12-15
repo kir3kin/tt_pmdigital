@@ -1,0 +1,32 @@
+// :::  Basic settings
+@import '@scss-utils/vars';
+@import '@scss-utils/mixins';
+
+.clients {
+	@include breakpoint-range($bp-mobile, $bp-tablet) {
+		.container {
+			padding: 5rem 0;
+		}
+
+		&__list {
+			padding: 5rem 2rem 0;
+			gap: 2rem;
+		}
+	}
+
+	@include breakpoint($bp-mobile) {
+		.container {
+			padding: 2rem;
+		}
+
+		&__list {
+			padding: 3rem 0;
+
+			&__item {
+				width: 6.1rem;
+				height: 3.7rem;
+			}
+		}
+
+	}
+}

@@ -1,0 +1,5 @@
+.titles {
+	@include breakpoint($bp-mobile) {
+		font-size: $text-second-size;
+	}
+}

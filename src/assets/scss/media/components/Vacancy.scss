@@ -1,0 +1,60 @@
+// :::  Basic settings
+@import '@scss-utils/vars';
+@import '@scss-utils/mixins';
+
+.vacancy {
+	@include breakpoint-range($bp-mobile, $bp-tablet) {
+		.container {
+			padding: 6rem 2rem;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+
+		&__content {
+			margin-left: 0;
+			margin-top: 3rem;
+		}
+
+		&__button {
+			margin: auto auto 2rem 2rem;
+		}
+	}
+
+	@include breakpoint($bp-mobile) {
+		.wrapper {
+			margin: 2rem 0;
+		}
+
+		.container {
+			flex-flow: column;
+			padding: 3.5rem 5rem;
+			align-items: center;
+		}
+
+		&__image {
+			width: 13.4rem;
+			height: 7.9rem;
+		}
+
+		&__content {
+			margin: 1.5rem auto auto;
+			text-align: center;
+		}
+
+		&__title.titles::before {
+			left: 50%;
+			transform: translateX(-50%);
+		}
+
+		&__title,
+		&__desc {
+			width: 100%;
+			margin-bottom: 1.5rem;
+		}
+
+		&__button {
+			margin: auto;
+			width: 100%;
+		}
+	}
+}

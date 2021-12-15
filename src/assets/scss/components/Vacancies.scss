@@ -1,0 +1,62 @@
+// :::  Basic settings
+@import '@scss-utils/vars';
+@import '@scss-utils/mixins';
+
+.vacancies {
+	.container {
+		padding: 8rem 0;
+		display: flex;
+		flex-flow: row;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 2.6rem;
+	}
+
+	&__card {
+		padding: 13rem 6rem;
+		color: $text-fourth-color;
+		text-align: center;
+		border: 1px solid $bg-main-color;
+
+		&__content {
+			padding-top: 2.5rem;
+			position: relative;
+
+			&::before {
+				content: '';
+				display: block;
+				position: absolute;
+				width: 30%;
+				top: 0;
+				left: 50%;
+				transform: translateX(-50%);
+				border-top: 1px solid $bg-main-color;
+			}
+		}
+
+		&__numbers {
+			font-size: $vacancy-numbers-size;
+			font-weight: 700;
+			margin-bottom: 2.5rem;
+		}
+
+		&__desc {
+			font-size: $text-second-size;
+			font-weight: 500;
+			line-height: 3.4rem;
+		}
+
+		&:nth-child(3n+1) {
+			background-color: $vacancy-1-bg;
+		}
+
+		&:nth-child(3n+2) {
+			background-color: $vacancy-2-bg;
+		}
+
+		&:nth-child(3n+3) {
+			background-color: $vacancy-3-bg;
+		}
+	}
+
+}

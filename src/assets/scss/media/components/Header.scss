@@ -1,0 +1,40 @@
+// :::  Basic settings
+@import '@scss-utils/vars';
+@import '@scss-utils/mixins';
+
+.header {
+	@include breakpoint($bp-tablet) {
+		&__search__auth {
+			display: flex;
+		}
+	}
+
+	@include breakpoint-range($bp-mobile, $bp-tablet) {
+		.container {
+			width: $container-tablet;
+		}
+	}
+
+	@include breakpoint($bp-mobile) {
+		.container {
+			width: $container-mobile;
+			padding: 1.6rem 2rem 4.7rem;
+			align-items: center;
+		}
+
+		&__burger-menu {
+			display: block;
+		}
+
+		&__title {
+			font-size: $text-fifth-size;
+			margin-bottom: 2rem;
+		}
+
+		&__subtitle {
+			font-size: 30px;
+			line-height: 3.6rem;
+			padding: 0;
+		}
+	}
+}

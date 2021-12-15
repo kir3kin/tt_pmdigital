@@ -1,0 +1,118 @@
+// :::  Basic settings
+@import '@scss-utils/vars';
+@import '@scss-utils/mixins';
+
+.navigation {
+	.wrapper {
+		background-color: $navigation-nav-bg;
+	}
+
+	.container {
+		display: flex;
+		flex-flow: row;
+		justify-content: space-between;
+		align-items: center;
+		padding: 1.2rem 0;
+	}
+
+	&--search-page {
+		.wrapper {
+			background-color: $bg-main-color;
+		}
+	}
+
+	&__nav {
+		&__item {
+			font-size: $text-fourth-size;
+			font-weight: 400;
+			color: $navigation-text-nonactive-color;
+			text-decoration: none;
+			line-height: 2.4rem;
+
+			&:not(:last-child) {
+				padding-right: 1.25rem;
+				border-right: 1px solid $text-main-color;
+			}
+			
+			&:not(:first-child) {
+				padding-left: 1.25rem;
+			}
+			
+			&:hover,
+			&--active {
+				font-weight: 600;
+				color: $text-main-color;
+			}
+		}
+	}
+
+	&__right {
+		display: flex;
+		flex-flow: row;
+		align-items: center;
+	}
+
+	&__language {
+		color: $navigation-text-nonactive-color;
+		margin-right: 2.5rem;
+		display: flex;
+		flex-flow: row;
+		align-items: center;
+		text-transform: uppercase;
+
+		&:hover {
+			cursor: pointer;
+		}
+
+		&::before {
+			content: '';
+			display: block;
+			height: 2.4rem;
+			width: 2.4rem;
+			margin-right: 0.5rem;
+			background-image: url('@images/icons/nav/network.svg');
+			background-repeat: no-repeat;
+		}
+
+		&::after {
+			content: '';
+			display: block;
+			height: 0.7rem;
+			width: 1.4rem;
+			margin-left: 1rem;
+
+			background-image: url('@images/icons/arrow.svg');
+			background-repeat: no-repeat;
+		}
+
+	}
+
+	&__auth {
+		font-size: $text-fourth-size;
+		color: $text-main-color;
+		display: block;
+
+		&:hover {
+			text-decoration: none;
+		}
+
+		// only for demonstration
+		&--signed {
+			display: none;
+			text-decoration: none;
+			align-items: center;
+
+			&::after {
+				content: '';
+				width: 2rem;
+				height: 1rem;
+				display: block;
+				margin-left: .5rem;
+				
+				background-repeat: no-repeat;
+				background-position: center;
+				background-image: url('@images/icons/nav-arrow.svg');
+			}
+		}
+	}
+}

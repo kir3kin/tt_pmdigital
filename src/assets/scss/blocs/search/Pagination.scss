@@ -1,0 +1,88 @@
+// :::  Basic settings
+@import '@scss-utils/vars';
+@import '@scss-utils/mixins';
+
+.pagination {
+	padding: 0.8rem;
+	display: flex;
+	flex-flow: row;
+	align-items: center;
+	gap: 1.6rem;
+
+	&__item {
+		width: 2.4rem;
+		height: 2.4rem;
+		text-decoration: none;
+		font-size: $text-fourth-size;
+		color: $pg-text-color;
+		border-radius: 50%;
+		text-align: center;
+		line-height: 2.6rem;
+
+		&--active,
+		&:hover {
+			background-color: $bg-main-color;
+			color: $text-main-color;
+		}
+
+		&--middle {
+			color: $text-fourth-color;
+
+			&:hover {
+				background-color: transparent;
+				color: $text-fourth-color;
+			}
+		}
+	}
+
+	&__arr {
+		width: 2.4rem;
+		height: 2.4rem;
+		text-decoration: none;
+		border-radius: 50%;
+		position: relative;
+		cursor: auto;
+
+		&:hover {
+			background: transparent;
+		}
+
+		&::after {
+			content: '';
+			display: block;
+			width: .8rem;
+			height: .8rem;
+			border-top: 2px solid $pg-text-color;
+			border-right: 2px solid $pg-text-color;
+			border-radius: 0;
+			position: absolute;
+			top: .7rem;
+		}
+		
+		&--next::after {
+			left: .5rem;
+			transform: rotate(45deg);
+		}
+
+		&--prev::after {
+			left: .9rem;
+			transform: rotate(-135deg);
+		}
+
+		&--active {
+			cursor: pointer;
+
+			&:hover {
+				background-color: $bg-main-color;
+			}
+			
+			&::after {
+				border-color: $bg-main-color;
+			}
+			
+			&:hover::after {
+				border-color: $text-main-color;
+			}
+		}
+	}
+}

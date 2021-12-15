@@ -1,0 +1,10 @@
+// :::  Basic settings
+@import '@scss-utils/vars';
+@import '@scss-utils/mixins';
+
+.more-list {
+	@include breakpoint($bp-mobile) {
+		top: calc(100% + .6rem);
+		right: 0;
+	}
+}

@@ -1,0 +1,36 @@
+// :::  Basic settings
+@import '@scss-utils/vars';
+@import '@scss-utils/mixins';
+
+.navigation {
+	@include breakpoint-range($bp-mobile, $bp-tablet) {
+		.container {
+			padding: 1.2rem 1rem;
+		}
+	}
+
+	@include breakpoint($bp-mobile) {
+		.container {
+			padding: 1.2rem 2rem;
+			justify-content: space-between;
+		}
+
+		&__right {
+			width: 100%;
+			justify-content: space-between;
+		}
+
+		&__nav,
+		&__auth {
+			display: none;
+		}
+
+		// &__language {}
+
+		// only for demonstration
+		&__auth--signed {
+			display: flex;
+		}
+
+	}
+}

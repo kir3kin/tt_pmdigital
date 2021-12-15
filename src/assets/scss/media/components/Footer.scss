@@ -1,0 +1,74 @@
+// :::  Basic settings
+@import '@scss-utils/vars';
+@import '@scss-utils/mixins';
+
+.footer {
+	@include breakpoint($bp-tablet) {
+		.wrapper {
+			margin-top: 4rem;
+		}
+	}
+
+	@include breakpoint-range($bp-mobile, $bp-tablet) {
+		&__store {
+			display: none !important;
+		}
+	}
+
+	@include breakpoint($bp-mobile) {
+		.container {
+			padding: 12rem 2rem 2.5rem;
+		}
+	
+		&__top {
+			display: flex;
+			flex-flow: column;
+			gap: 4rem;
+			text-align: center;
+		}
+
+		&__store {
+			display: flex;
+			margin-top: 1.5rem;
+
+			&.store {
+				gap: 1rem;
+			}
+
+			.store__item {
+				width: 11rem;
+				height: 3.5rem;
+			}
+		}
+
+		&__bottom {
+			margin-top: 5.3rem;
+			padding-top: 1.5rem;
+		}
+
+		&__info {
+			flex-wrap: wrap;
+
+			&__item {
+				&:first-child {
+					padding-right: 1.5rem;
+				}
+
+				&:last-child {
+					padding-left: 1.5rem;
+				}
+
+
+				&:nth-child(2) {
+					order: 1;
+					padding: 0;
+					border: none;
+					margin-top: 1rem;
+
+				}
+			}
+		}
+
+
+	}
+}

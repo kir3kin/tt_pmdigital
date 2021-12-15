@@ -1,0 +1,67 @@
+// :::  Basic settings
+@import '@scss-utils/vars';
+@import '@scss-utils/mixins';
+
+.header {
+	.wrapper {
+		background-color: $bg-main-color;
+	}
+
+	.container {
+		width: 83rem;
+		color: $text-main-color;
+		padding: 5.5rem 0 6rem;
+		text-align: center;
+		display: flex;
+		flex-flow: column;
+	}
+
+	&--search-page {
+		.container {
+			padding-top: 1.5rem;
+		}
+	}
+
+	&__burger-menu {
+		display: none;
+	}
+
+	&__title {
+		font-size: $text-third-size;
+		font-weight: 500;
+		margin-bottom: 3rem;
+		text-transform: uppercase;
+	}
+
+	&__subtitle {
+		font-size: $header-subtitle-size;
+		font-weight: 600;
+		padding: 0 4rem;
+		line-height: 7.7rem;
+
+		@include multiline-text-truncation(2);
+	}
+
+	&__search {
+		margin-top: 6rem;
+
+		&__auth {
+			display: none;
+			flex-flow: row;
+			align-items: center;
+			justify-content: center;
+			line-height: 2.2rem;
+
+			&::before {
+				content: '';
+				display: block;
+				width: 2.4rem;
+				height: 2.4rem;
+				margin-right: 1rem;
+				background-image: url('@images/icons/header/user.svg');
+				background-repeat: no-repeat;
+				background-position: center;
+			}
+		}
+	}
+}

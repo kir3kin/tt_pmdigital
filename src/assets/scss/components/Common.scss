@@ -1,0 +1,39 @@
+html {
+	font-size: 62.5%;// for: 1rem = 10px
+}
+
+body {
+	font-family: $font-family;
+	font-size: $text-fifth-size;
+	color: $text-third-color;
+	background-color: $bg-fourth-color;
+}
+
+* {
+	box-sizing: border-box;
+
+	a {
+		-webkit-tap-highlight-color: transparent;
+	}
+}
+
+.wrapper {
+	width: 100%;
+}
+
+.container {
+	width: $container-lg;
+	margin: 0 auto;
+}
+
+.violet {
+	color: $text-fifth-color;
+}
+
+.clearfix {
+	&::after {
+		content: '';
+		clear: both;
+		display: block;
+	}
+}

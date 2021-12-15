@@ -1,0 +1,34 @@
+// ============== Develop ============== \\
+@mixin outlined($color: #000) {
+	outline: 1px solid $color;
+}
+
+// ============== For "..." ============== \\
+@mixin text-truncation() {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+@mixin multiline-text-truncation($line-number) {
+	display: -webkit-box;
+	-webkit-line-clamp: $line-number;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: normal;
+}
+
+// ============== RWD ============== \\
+@mixin breakpoint($bp) {
+	@media (max-width: $bp) {
+		@content;
+	}
+}
+
+// (min-width: 769px) and (max-width: 1299px)
+@mixin breakpoint-range($bp-min, $bp-max) {
+	@media (min-width: calc($bp-min + 1px)) and (max-width: calc($bp-max - 1px)) {
+		@content;
+	}
+}

@@ -1,0 +1,43 @@
+// :::  Basic settings
+@import '@scss-utils/vars';
+@import '@scss-utils/mixins';
+
+.download {
+	.wrapper {
+		background-color: $bg-second-color;
+		margin: 20.5rem 0 17rem;
+	}
+
+	.container {
+		padding: 8rem 11rem 9rem 8rem;
+		display: flex;
+		flex-flow: row;
+	}
+
+	&__image {
+		min-width: 26.5rem;
+		height: auto;
+		position: relative;
+		margin-right: 7.5rem;
+
+		img {
+			position: absolute;
+			top: -20rem;
+			left: 0;
+			width: 26.5rem;
+			height: 42.2rem;
+		}
+	}
+
+	&__content {
+		margin-right: 12.5rem;
+	}
+
+	&__title {
+		margin-bottom: 2.5rem;
+	}
+
+	&__desc {
+		line-height: 2rem;
+	}
+}

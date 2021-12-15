@@ -1,0 +1,39 @@
+// :::  Basic settings
+@import '@scss-utils/vars';
+@import '@scss-utils/mixins';
+
+.store {
+	@include breakpoint-range($bp-mobile, $bp-tablet) {
+		& {
+			display: flex;
+			flex-flow: row;
+			gap: 2rem;
+		}
+	}
+
+	@include breakpoint($bp-mobile) {
+		& {
+			display: flex;
+			flex-flow: row;
+			gap: 1.3rem;
+
+			&__item {
+				width: 14rem;
+				height: 4.3rem;
+
+				&:not(:last-child) {
+					margin-bottom: 0;
+				}
+
+				&--iphone {
+					background-image: url('@images/stores/appstore--black.svg');
+				}
+
+				&--google {
+					background-image: url('@images/stores/google-play--black.svg');
+				}
+			}
+		}
+	}
+}
+	

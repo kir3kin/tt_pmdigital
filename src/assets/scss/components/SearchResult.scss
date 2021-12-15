@@ -1,0 +1,48 @@
+// :::  Basic settings
+@import '@scss-utils/vars';
+@import '@scss-utils/mixins';
+
+.result {
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+
+	&__header {
+		width: 100%;
+	}
+
+	&__sort {
+		margin-top: 2.5rem;
+		display: flex;
+		flex-flow: row;
+		align-items: center;
+		
+		&__desc {
+			color: #5B5B5B;
+			font-size: $text-fourth-size;
+		}
+		
+		&__list {
+			font-size: $text-fourth-size;
+			text-transform: lowercase;
+			margin-left: 1.5rem;
+			padding-right: 1.6rem;
+			cursor: pointer;
+
+			outline: none;
+			border: none;
+		}
+	}
+
+	&__list {
+		margin-top: 4rem;
+		display: flex;
+		flex-flow: column;
+		gap: 4rem;
+		width: 100%;
+	}
+
+	&__pagination {
+		margin-top: 6rem;
+	}
+}

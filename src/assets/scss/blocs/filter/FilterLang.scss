@@ -1,0 +1,33 @@
+// :::  Basic settings
+@import '@scss-utils/vars';
+@import '@scss-utils/mixins';
+
+.filter-lang {
+	&__item {
+		display: block;
+		width: 2.4rem;
+		height: 2.4rem;
+		margin-right: .8rem;
+		background-repeat: no-repeat;
+		background-position: center;
+
+		&--uk {
+			background-image: url('@images-filter/flags/uk.svg');
+		}
+		&--ru {
+			background-image: url('@images-filter/flags/russia.svg');
+		}
+		&--ua {
+			background-image: url('@images-filter/flags/ukraine.svg');
+		}
+		&--de {
+			background-image: url('@images-filter/flags/germany.svg');
+		}
+		&--pl {
+			background-image: url('@images-filter/flags/poland.svg');
+		}
+		&--sp {
+			background-image: url('@images-filter/flags/spain.svg');
+		}
+	}
+}

@@ -1,0 +1,33 @@
+// :::  Basic settings
+@import '@scss-utils/vars';
+@import '@scss-utils/mixins';
+
+.more-list {
+	display: none;
+	position: absolute;
+	flex-flow: column;
+	padding: 2rem;
+	border: 0.5px solid $brdr-color;
+	top: -1rem;
+	right: 100%;
+	z-index: $option-more-list;
+	background: $bg-fourth-color;
+
+	&__item {
+		display: block;
+		width: auto;
+		height: 100%;
+		color: #1e1e1e;
+		line-height: 1.7rem;
+		white-space: nowrap;
+		cursor: pointer;
+
+		&:not(:last-child) {
+			margin-bottom: 2rem;
+		}
+
+		&:hover {
+			text-shadow: 1px 1px 0 rgba(0,0,0,.3);
+		}
+	}
+}

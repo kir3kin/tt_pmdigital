@@ -1,0 +1,79 @@
+// :::  Basic settings
+@import '@scss-utils/vars';
+@import '@scss-utils/mixins';
+
+.filter-switch {
+	display: flex;
+	flex-flow: row;
+	align-items: center;
+	justify-content: space-between;
+
+	&__desc {
+		color: $text-third-color;
+		font-size: $text-fifth-size;
+		font-weight: 300;
+
+		&__icon {
+			display: flex;
+			flex-flow: row;
+			align-items: center;
+
+			&::before {
+				content: '';
+				display: block;
+				width: 2.4rem;
+				height: 2.4rem;
+				background-repeat: no-repeat;
+				background-position: center;
+				margin-right: 0.8rem;
+			}
+
+			&--photo::before {
+				background-image: url('@images-filter/speaker.svg');
+			}
+
+			&--students::before {
+				background-image: url('@images-filter/graduated.svg');
+			}
+		}
+	}
+
+	&__button {
+		input {
+			display: none;
+		}
+
+		label {
+			display: block;
+			width: 2.5rem;
+			height: 1rem;
+			background-color: lighten($switch-non-active, 45%);
+			border-radius: 1rem;
+			cursor: pointer;
+			position: relative;
+
+			&::before {
+				content: '';
+				display: block;
+				width: 1.2rem;
+				height: 1.2rem;
+				border-radius: 50%;
+				background-color: $switch-non-active;
+
+				position: absolute;
+				top: -1px;
+				left: 0;
+			}
+		}
+
+		input:checked ~ label {
+			background-color: lighten($switch-active, 25%);
+
+			&::before {
+				background-color: $switch-active;
+				right: 0;
+				left: auto;
+			}
+		}
+	}
+}

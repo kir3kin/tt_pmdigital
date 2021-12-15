@@ -1,0 +1,41 @@
+// :::  Basic settings
+@import '@scss-utils/vars';
+@import '@scss-utils/mixins';
+
+.search-page {
+	.container {
+		padding: 6rem 0;
+		display: flex;
+		flex-flow: row;
+		justify-content: space-between;
+	}
+
+	&__icon {
+		display: none;
+		width: 4rem;
+		height: 4rem;
+		margin: 0 2rem 2rem auto;
+		background-color: #F6F6FF;
+		background-image: url('@images/icons/filter.svg');
+		background-repeat: no-repeat;
+		background-position: center;
+		outline: none;
+		z-index: $filter-icon;
+		cursor: pointer;
+
+		-webkit-tap-highlight-color: transparent;
+
+		&--open,
+		&:hover, &:focus, &:active {
+			background-color: darken(#f6f6f6, 20%);
+		}
+	}
+
+	&__result {
+		width: 84rem;
+	}
+
+	&__filter {
+		width: 36rem;
+	}
+}

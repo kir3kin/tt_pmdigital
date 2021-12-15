@@ -1,0 +1,37 @@
+// :::  Basic settings
+@import '@scss-utils/vars';
+@import '@scss-utils/mixins';
+
+.blog {
+	.container {
+		padding: 7rem 0;
+	}
+
+	&__header {
+		display: flex;
+		flex-flow: row;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__all-link {
+		display: block;
+		font-size: $text-third-size;
+		color: $text-fifth-color;
+		text-transform: capitalize;
+		text-decoration: none;
+		padding-bottom: 0.7rem;
+		line-height: 2.2rem;
+		transform: translateY(0.7rem);
+
+		border-bottom: 1px solid $text-fifth-color;
+
+		&:hover {
+			border-bottom-color: transparent;
+		}
+	}
+
+	&__slider {
+		margin-top: 3rem;
+	}
+}

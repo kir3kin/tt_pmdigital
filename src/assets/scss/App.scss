@@ -1,0 +1,20 @@
+// :::  Basic settings
+@import '~reset-css';
+@import '@scss-utils/fonts';
+@import '@scss-utils/vars';
+@import '@scss-utils/mixins';
+
+// :::  Components
+@import './components/Common';
+
+// ::: Common component's Blocs
+@import './blocs/Titles';
+@import './blocs/Button';
+
+
+// ************* Media queris ************* \\
+// ::: Components
+@import '@scss-media/components/Common';
+
+// ::: Common component's Blocs
+@import '@scss-media/blocs/Titles';

@@ -1,0 +1,40 @@
+// :::  Basic settings
+@import '@scss-utils/vars';
+@import '@scss-utils/mixins';
+
+.vacancy {
+	.wrapper {
+		background-color: $bg-second-color;
+		margin: 10rem 0;
+	}
+
+	.container {
+		padding: 8rem 3.5rem;
+		display: flex;
+		flex-flow: row;
+	}
+
+	&__image {
+		width: 28rem;
+		height: 16rem;
+	}
+
+	&__content {
+		margin-left: 4rem;
+		height: 100%;
+	}
+
+	&__title {
+		margin-bottom: 2.5rem;
+		width: 46rem;
+	}
+
+	&__desc {
+		width: 40rem;
+		line-height: 2rem;
+	}
+
+	&__button {
+		margin: auto 0 auto 15.5rem;
+	}
+}

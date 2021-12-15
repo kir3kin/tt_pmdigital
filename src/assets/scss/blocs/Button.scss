@@ -1,0 +1,28 @@
+.button {
+	display: block;
+	border: none;
+	padding: 1.4rem 2rem;
+	background-color: $bg-main-color;
+	color: $text-main-color;
+	font-weight: 600;
+	line-height: 2rem;
+	font-size: $text-fourth-size;
+	letter-spacing: 1px;
+	cursor: pointer;
+	height: 4.8rem;
+	
+	@include text-truncation();
+
+	&:hover {
+		background-color: #262662;
+	}
+
+	&--search-page {
+		background-color: $header-button-bg;
+		color: #202020;
+
+		&:hover {
+			color: $text-main-color;
+		}
+	}
+}

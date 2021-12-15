@@ -1,13 +1,14 @@
 const path = require('path')
+
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const MinimazierCssPlugin = require('css-minimizer-webpack-plugin')
 const TerserWebpackPlugin = require('terser-webpack-plugin')
 const CompressionPlugin = require("compression-webpack-plugin");
+// const SvgToMiniDataURI = require("mini-svg-data-uri");
 
 const isProd = process.env.NODE_ENV === 'production'
-
 
 const cssLoaders = extra => {
 	const loaders = [
@@ -27,7 +28,6 @@ const fileLoader = folder => ({
 	}
 })
 
-
 module.exports = {
 	mode: isProd ? 'production' : 'development',
 	context: path.resolve(__dirname, 'src'),
@@ -46,7 +46,8 @@ module.exports = {
 			'@scss': path.resolve(__dirname, 'src/assets/scss'),
 			'@scss-media': path.resolve(__dirname, 'src/assets/scss/media'),
 			'@scss-utils': path.resolve(__dirname, 'src/assets/scss/utils'),
-			'@images': path.resolve(__dirname, 'src/assets/images')
+			'@images': path.resolve(__dirname, 'src/assets/images'),
+			'@images-filter': path.resolve(__dirname, 'src/assets/images/icons/filter')
 		}
 	},
 	devtool: isProd ? false : 'inline-source-map',
@@ -61,13 +62,13 @@ module.exports = {
 		},
 		minimize: isProd,
 		minimizer: [
-			// new MinimazierCssPlugin(),
-			// new TerserWebpackPlugin()
+			new MinimazierCssPlugin(),
+			new TerserWebpackPlugin()
 		]
 	},
 	plugins: [
 		new HtmlWebpackPlugin({
-			template: './index.html',
+			template: './template/index.html',
 			minify: {
 				collapseWhitespace: isProd
 			}
@@ -86,12 +87,12 @@ module.exports = {
 			]
 		}),
 		new CompressionPlugin({
-			test: /\.(js|css|ttf|woff2|svg|webp)$/i,
+			test: /\.(js|css|ttf|woff2|woff|svg|webp|png|eot)$/i,
 			algorithm: 'gzip',
 			filename: '[path][base].gz'
 		}),
 		new CompressionPlugin({
-			test: /\.(js|css|ttf|woff2|svg|webp)$/i,
+			test: /\.(js|css|ttf|woff2|woff|svg|webp|png|eot)$/i,
 			algorithm: 'brotliCompress',
 			filename: '[path][base].br'
 		})
@@ -107,16 +108,21 @@ module.exports = {
 				use: cssLoaders('sass-loader')
 			},
 			{
-				test: /\.tsx?$/i,
+				test: /\.(jsx?)$/i,
 				exclude: '/node_modules/',
-				loader: 'ts-loader',
+				use: {
+					loader: 'babel-loader',
+					options: {
+						presets: ['@babel/preset-env', '@babel/preset-react']
+					}
+				}
 			},
 			{
-        test: /\.(svg|webp)$/i,
+        test: /\.(svg|webp|png|jpe?g)$/i,
 				...fileLoader('images')
       },
 			{
-				test: /\.(ttf|woff2)$/i,
+				test: /\.(ttf)$/i,
 				...fileLoader('fonts')
 			}
 		]

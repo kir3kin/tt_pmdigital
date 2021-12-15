@@ -1,0 +1,38 @@
+// :::  Basic settings
+@import '@scss-utils/vars';
+@import '@scss-utils/mixins';
+
+.search-form {
+	@include breakpoint-range($bp-mobile, $bp-tablet) {
+		flex-wrap: wrap;
+		justify-content: space-around;
+
+		&__field {
+			margin-right: 0;
+			margin-bottom: 2rem;
+		}
+
+		&__input {
+			&--position, &--city {
+				width: 35rem;
+			}
+		}
+	}
+
+	@include breakpoint($bp-mobile) {
+		flex-flow: column;
+		justify-content: space-around;
+		width: 100%;
+
+		&__field {
+			margin-right: 0;
+			margin-bottom: 2rem;
+		}
+
+		&__input {
+			width: 100%;
+			font-size: $text-fourth-size;
+			letter-spacing: 0;
+		}
+	}
+}

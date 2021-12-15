@@ -1,0 +1,17 @@
+// :::  Basic settings
+@import '@scss-utils/vars';
+@import '@scss-utils/mixins';
+
+.blog {
+	@include breakpoint-range($bp-mobile, $bp-tablet) {
+		.container {
+			padding: 5rem 0;
+		}
+	}
+
+	@include breakpoint($bp-mobile) {
+		.container {
+			padding: 2rem;
+		}
+	}
+}

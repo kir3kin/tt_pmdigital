@@ -1,0 +1,26 @@
+// :::  Basic settings
+@import '@scss-utils/vars';
+@import '@scss-utils/mixins';
+
+.search-page {
+	@include breakpoint($bp-tablet) {
+		.container {
+			padding: 4rem 0;
+			position: relative;
+			flex-flow: column;
+			overflow: scroll;
+		}
+
+		&__icon {
+			display: block;
+		}
+
+		&__result {
+			width: 100%;
+		}
+
+		&__filter {
+			width: 100%;
+		}
+	}
+}

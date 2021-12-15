@@ -9,12 +9,6 @@
 		}
 	}
 
-	@include breakpoint-range($bp-mobile, $bp-tablet) {
-		&__store {
-			display: none !important;
-		}
-	}
-
 	@include breakpoint($bp-mobile) {
 		.container {
 			padding: 12rem 2rem 2.5rem;
@@ -28,7 +22,7 @@
 		}
 
 		&__store {
-			display: flex;
+			display: flex !important;
 			margin-top: 1.5rem;
 
 			&.store {

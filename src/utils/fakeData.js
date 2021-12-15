@@ -113,30 +113,5 @@ export const CANDIDATE_LIST = [
 		],
 		update: '20 минут назад',
 		isOnline: false
-	},
-	{
-		position: 'Продавец - консультант',
-		name: 'Космос',
-		age: '27 лет',
-		location: 'Dnipro, Ukraine',
-		exp: [
-			'Координатор BALOX Agency - 4 мес.',
-			'Оператор кол центра в DELTA - 11 мес.'
-		],
-		update: '20 минут назад',
-		isOnline: false
-	},
-	{
-		position: 'Продавец - консультант',
-		name: 'Пчела',
-		age: '23 года',
-		location: 'Kyiv, Ukraine',
-		exp: [
-			'Координатор BALOX Agency - 4 мес.',
-			'Оператор кол центра в JYSK - 11 мес.',
-			'Оператор кол центра в Żabka - 3 мес.',
-		],
-		update: '9 минут назад',
-		isOnline: true
-	},
+	}
 ]
